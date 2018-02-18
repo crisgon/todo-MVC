@@ -1,0 +1,21 @@
+html
+  head
+    title="ToDo - App"
+    link(rel="stylesheet", href="css/style.css")
+    meta(name="viewport", content="width=device-width")
+  body
+    section.container
+      img(src="images/logo.svg", alt="ToDo List Logo")
+      form.new-task
+        input.new-task__input(type="text", name="New Task")
+        input(type="submit", value="New", onclick="taskController.addEvent(event)")
+
+      ul.task-list
+
+
+    script(src="js/app/model/TaskModel.js")
+    script(src="js/app/model/TaskList.js")
+    script(src="js/app/controller/TaskController.js")
+    script(src="js/app/view/TaskView.js")
+    script.
+      let taskController = new TaskController();

@@ -1,0 +1,41 @@
+@import 'base/reset'
+@import 'helpers/helpers'
+@import 'helpers/variables'
+  
+  
+body
+  background-color: $dark-default
+
+.container 
+  width: 500px
+  height: auto 
+  center(10%, 50%, 50%, 10%)
+  flex-direction: column
+  flexDefault()
+
+.new-task 
+  width: 100%
+  box-sizing: border-box
+  margin: 1em 0 .5em 0
+  display: flex
+
+  .new-task__input
+    flex: 2
+    padding: .7em
+
+.task-list
+  width: 100%
+  height: auto
+
+  .task-list__item
+    width: 100%
+    background-color: $light-default 
+    font-size: 1.3em
+    box-sizing: border-box
+    padding: .5em
+    margin: .2em 0
+  
+  .task-list__item-name
+    padding: 0 .5em
+  
+  
