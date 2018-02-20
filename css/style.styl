@@ -1,13 +1,16 @@
 @import 'base/reset'
 @import 'helpers/helpers'
 @import 'helpers/variables'
+@import 'https://fonts.googleapis.com/css?family=Lato'
   
   
 body
   background-color: $dark-default
+  font-family: 'Lato', sans-serif
 
 .container 
-  width: 500px
+  width: 90%
+  max-width: 500px
   height: auto 
   center(10%, 50%, 50%, 10%)
   flex-direction: column
@@ -20,12 +23,19 @@ body
   display: flex
 
   .new-task__input
-    flex: 2
+    flex: 3
     padding: .7em
+  
+  .new-task__input-button
+    flex: .3
+    font-size: 1.3em
 
 .task-list
   width: 100%
   height: auto
+  display: flex
+  flex-direction: column-reverse
+  justify-content: center
 
   .task-list__item
     width: 100%
@@ -34,8 +44,43 @@ body
     box-sizing: border-box
     padding: .5em
     margin: .2em 0
+    position: relative
   
   .task-list__item-name
     padding: 0 .5em
   
-  
+  .task-list__item-date
+    background-color: #f1f2f6
+    padding: .2em
+    position: absolute
+    right: 1em
+    top: .3em
+
+.info,
+.info-m
+  font-size: 1.3em
+  color: #fff
+  margin: 1em 0
+
+.info
+  display: none
+
+.fadeOut
+  animation: out 1s
+
+@keyframes out 
+  0% 
+    opacity: .5
+    transform: translateX(0%) 
+
+  100%  
+    opacity: .1
+    transform: translateX(-200%)  
+ 
+
+@media(min-width: 420px)
+  .info
+    display: flex
+
+  .info-m
+    display: none 

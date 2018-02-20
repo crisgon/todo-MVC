@@ -7,10 +7,13 @@ html
     section.container
       img(src="images/logo.svg", alt="ToDo List Logo")
       form.new-task
-        input.new-task__input(type="text", name="New Task")
-        input(type="submit", value="New", onclick="taskController.addEvent(event)")
+        input.new-task__input(type="text", autofocus)
+        input.new-task__input-button(type="submit", value="+", onclick="taskController.addEvent(event)")
 
       ul.task-list
+
+      p.info="Para excluir tarefas efetue um clique duplo."
+      p.info-m="Para excluir uma tarefas deslize-à."
 
 
     script(src="js/app/model/TaskModel.js")

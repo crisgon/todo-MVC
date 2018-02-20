@@ -15,7 +15,8 @@ class TaskController {
     this._allTasks.updateList(newTask);
 
     this._clearInput();
-    this._view.updateView(this._allTasks.list);
+    this._view.updateView(newTask);
+    this._view.finishTask();
   }
 
   _createTask (task) {
@@ -26,6 +27,7 @@ class TaskController {
   _clearInput () {
 
     this._taskItem.value = '';
+    this._taskItem.focus();
   }
 
 }
